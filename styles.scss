@@ -1,0 +1,254 @@
+$color: #02dac5;
+$bg-color: #131313;
+@font-face {
+  font-family: "portfolioFont";
+  src: url("./font/RobotoCondensed-VariableFont_wght.ttf") format("woff2");
+}
+body {
+  background-color: $bg-color !important;
+}
+* {
+  font-family: "portfolioFont", sans-serif;
+}
+.navBar {
+  background-color: #080808;
+  color: white;
+  .logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      color: $color;
+    }
+  }
+}
+.nav-item {
+  width: 32%;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1px;
+  &:hover {
+    color: $color;
+    cursor: pointer;
+  }
+}
+.view-resume {
+  background-color: #02dac5;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      color: black !important;
+    }
+  }
+}
+.slider {
+  .img {
+    position: relative;
+  }
+  img {
+    width: 100%;
+    height: 90vh;
+  }
+  .overlay {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    height: 92vh;
+    background-color: #060606;
+    opacity: 0.7;
+    filter: brightness(50%);
+    // Mobile
+    @media only screen and (max-width: 600px) {
+      height: 90.5vh;
+    }
+    //tablet
+    @media only screen and (min-width: 600px) and (max-width: 1024px) {
+      height: 92vh;
+    }
+  }
+  .welcome-msg {
+    color: white;
+    position: absolute;
+    width: 60%;
+    height: 90vh;
+    top: 10%;
+    right: 20%;
+    font-size: 50px !important;
+    font-weight: 400;
+    .about {
+      font-size: 35px !important;
+      font-weight: 400;
+    }
+    // Mobile
+    @media only screen and (max-width: 600px) {
+      font-size: 40px !important;
+      width: 90%;
+      top: 7%;
+      right: 5%;
+    }
+    .about {
+      font-size: 20px !important;
+    }
+    //tablet
+    @media only screen and (min-width: 600px) and (max-width: 1024px) {
+      font-size: 45px !important;
+      width: 75%;
+      top: 7%;
+      right: 12%;
+    }
+    .about {
+      font-size: 23px !important;
+    }
+  }
+
+  div p {
+    span {
+      color: $color;
+    }
+  }
+}
+
+.icon {
+  background-color: #cccccc;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: all 0.2s ease-in;
+  a{
+    color: black !important;;
+  }
+  &:hover {
+    background-color: $color;
+    transform: scale(1.04);
+    cursor: pointer;
+  }
+}
+.header {
+  p {
+    color: #737373;
+    font-size: small;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  h2 {
+    color: white;
+    font-size: 42px !important;
+    font-weight: 400;
+    span {
+      color: $color;
+    }
+  }
+}
+.card {
+  background-color: #262626 !important;
+  color: white !important;
+  margin: 10px;
+  padding: 40px;
+  max-height: 60vh !important;
+  border: 0.25px #00c0ad solid !important;
+  transition: all 0.7s ease-in-out;
+  &:hover {
+    background-color: #00c0ad !important;
+  }
+}
+.project-card {
+  background-color: #262626 !important;
+  color: white !important;
+  margin: 10px;
+  padding: 15px;
+  max-height: fit-content !important;
+  border: 0.25px #00c0ad solid !important;
+  border-radius: 5px;
+  transition: all 0.7s ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+  }
+  .img-container {
+    img {
+      border: 0.25px #00c0ad solid !important;
+      width: 100%;
+      height: 250px !important;
+      border-radius: 5px;
+    }
+  }
+}
+.container-bio {
+  color: white;
+  P {
+    font-weight: 400;
+    font-size: medium;
+  }
+  img {
+    border-radius: 50%;
+    border: 1px $color solid;
+    width: 400px;
+    height: 400px;
+  }
+}
+.container-aboutme {
+  background-color: #1d1d1d;
+  padding: 8px;
+  margin-top: 7% !important;
+}
+.technical-Skills {
+  color: white;
+  .img-skill-icons {
+    #img-skill-icon {
+      width: 100px !important;
+      height: 100px !important;
+      border: 1px $color solid;
+      border-radius: 50%;
+    }
+  }
+}
+.technical-Skills {
+  img {
+    transition: all 0.5s ease-in;
+    &:hover {
+      background-color: $color;
+    }
+  }
+}
+hr {
+  color: #a9a9a9 !important;
+}
+.contact-me {
+  background-color: #1d1d1d;
+}
+.contact-icon {
+  color: #c9c9c9;
+  a {
+    text-decoration: none;
+    color: #c9c9c9;
+    font-size: medium;
+  }
+}
+
+iframe {
+  width: 100vw;
+  height: 100vh;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+  z-index: 55;
+}
